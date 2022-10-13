@@ -24,9 +24,10 @@
 3. openstack_controller.py, cloudstack_controller.py in cloudmanager(main) directory, updater.py in openstack directory in cloudmanager(main) directory에서 오픈스택 서버와 클라우드스택의 서버 ip, 각 컴포넌트 별 id 등 작성
 4. 각 app directory(accounts, openstack, cloudstack, infosender) 내에 migrations directory 생성 후 directory 내에 __init__.py(빈 파일) 생성
 5. 1) python manage.py makemigrations / 2) python manage.py migrate 명령어들을 순서대로 입력하여 db 생성
-6. apps.py in openstack directory in cloudmanager(main) directory -> 
 ---- frontend part ----
-6. In frontend directory -> .env.local 파일 -> NEXT_PUBLIC_SERVER_URL=http://localhost:8000/ 에서 localhost 부분을 web application server ip로 변경(web application server와 web을 동일한 pc에서 구동할 경우 localhost로 사용해도 무방)
-7. In flontend directory -> yarn install
-8. Web application server 구동 -> python manage.py runserver 0.0.0.0:8000 --noreload
-9. Web 구동 -> yarn dev
+1. In flontend(main) directory -> yarn install
+2. In frontend(main) directory -> .env.local 파일 -> NEXT_PUBLIC_SERVER_URL=http://localhost:8000/ 에서 localhost 부분을 web application server ip로 변경(web application server와 web을 동일한 pc에서 구동할 경우 localhost로 둬도 무방)
+---- 구동 part ----
+1. Web application server 구동 -> cloudmanager(main) directory에서 python manage.py runserver 0.0.0.0:8000 --noreload 명령어 실행
+2. Web 구동 -> frontend(main)에서 yarn dev 명령어 실행
+3. URL에 http://localhost:3000/auth/sigin 을 입력하여 로그인 페이지로 이동, 회원가입 및 로그인을 통해 시스템 사용 가능
