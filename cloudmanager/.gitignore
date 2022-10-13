@@ -1,0 +1,13 @@
+__pycache__
+db.sqlite3
+/static
+/media
+.idea
+hoo_venv
+venv
+migrations
+.vs
+back_imgs
+.DS_Store
+makesig.py
+settings.py
