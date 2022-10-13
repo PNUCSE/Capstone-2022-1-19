@@ -9,9 +9,9 @@
 
 ## 2. 팀 소개
 
-201624406 고준성 kjs41680@gmail.com \\
-201624444 김영후 eagle7449@pusan.ac.kr \\
-201624540 이봉훈 drok02@naver.com \\
+201624406 고준성 kjs41680@gmail.com \n
+201624444 김영후 eagle7449@pusan.ac.kr \n
+201624540 이봉훈 drok02@naver.com \n
 
 ## 3. 구성도
 
