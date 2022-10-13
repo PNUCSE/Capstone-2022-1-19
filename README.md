@@ -14,7 +14,7 @@
 201624540 이봉훈 drok02@naver.com <br/> 
 
 ## 3. 구성도
-<img width="427" alt="그림1" src="https://user-images.githubusercontent.com/65642745/195553816-083954dc-9469-4881-a65b-a867bc17d46a.png">
+<img width="900" alt="그림1" src="https://user-images.githubusercontent.com/65642745/195553816-083954dc-9469-4881-a65b-a867bc17d46a.png">
 
 ## 4. 소개 및 시연 영상
 ## 5. 사용법
