@@ -1,0 +1,67 @@
+{
+    "stack_name": "cirros1",
+    "template": {
+      "heat_template_version": "2018-08-31",
+      "parameters":{
+            "flavor": {
+                "default": "m1.tiny",
+                "type": "string"
+            },
+            "packages":{
+                "default" :[],
+                "type" : "comma_delimited_list"
+            },
+            "image":{
+                "default": "cirros-0.5.2-x86_64-disk",
+                "type":"string"
+            },
+            "network_id": {
+               "default": "4c301b10-0d25-4528-9679-bc4f1b2d617f",
+               "type":"string"
+            }
+        },
+      "resources": {
+         "mybox": {
+            "type": "OS::Nova::Server",
+            "properties": {
+               "name": "centos instance",
+               "flavor": {"get_param":"flavor"},
+               "image": {"get_param":"image"},
+               "networks": [
+                  {
+                     "port": {
+                        "get_resource": "mybox_management_port"
+                     }
+                  }
+               ],
+               "user_data": {
+                  "get_resource": "myconfig"
+               },
+               "user_data_format": "RAW"
+            }
+         },
+         "myconfig": {
+            "type": "OS::Heat::CloudConfig",
+            "properties": {
+               "cloud_config": {
+                 "packages": {"get_param" : "packages"}
+               }
+            }
+         },
+         "mybox_management_port": {
+            "type": "OS::Neutron::Port",
+            "properties": {
+               "network_id": {
+                  "get_param":"network_id"
+               }
+            }
+         }
+      }
+   },
+      "parameters":{
+        "flavor" : "ds512M",
+        "packages" : [],
+        "image" : "cirros-0.5.2-x86_64-disk",
+        "network_id": ""
+    }
+}
