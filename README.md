@@ -19,8 +19,14 @@
 ## 4. 소개 및 시연 영상
 ## 5. 사용법
 ---- cloudmanager part ----
-1. In cloudmanager directory -> pip install -r requirements.txt
-2. In cloudmanager in cloudmanager -> settings.py의 맨 밑 Amazon S3 section에서 user의 access key, secret access key 작성
-3. 
-4. In frontend directory -> .env.local 파일 -> 
-4. In flontend directory -> yarn install
+1. In cloudmanager(main) directory -> pip install -r requirements.txt
+2. In cloudmanager(project) directory in cloudmanager(main) -> settings.py의 맨 밑 Amazon S3 section에서 user의 access key, secret access key 작성
+3. openstack_controller.py, cloudstack_controller.py in cloudmanager(main) directory, updater.py in openstack directory in cloudmanager(main) directory에서 오픈스택 서버와 클라우드스택의 서버 ip, 각 컴포넌트 별 id 등 작성
+4. 각 app directory(accounts, openstack, cloudstack, infosender) 내에 migrations directory 생성 후 directory 내에 __init__.py(빈 파일) 생성
+5. 1) python manage.py makemigrations / 2) python manage.py migrate 명령어들을 순서대로 입력하여 db 생성
+6. apps.py in openstack directory in cloudmanager(main) directory -> 
+---- frontend part ----
+6. In frontend directory -> .env.local 파일 -> NEXT_PUBLIC_SERVER_URL=http://localhost:8000/ 에서 localhost 부분을 web application server ip로 변경(web application server와 web을 동일한 pc에서 구동할 경우 localhost로 사용해도 무방)
+7. In flontend directory -> yarn install
+8. Web application server 구동 -> python manage.py runserver 0.0.0.0:8000 --noreload
+9. Web 구동 -> yarn dev
