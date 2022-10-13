@@ -18,7 +18,9 @@
 
 ## 4. 소개 및 시연 영상
 ## 5. 사용법
-1. pip install ./requirements.txt  
-2.   
-3.  
-4.  
+---- cloudmanager part ----
+1. In cloudmanager directory -> pip install -r requirements.txt
+2. In cloudmanager in cloudmanager -> settings.py의 맨 밑 Amazon S3 section에서 user의 access key, secret access key 작성
+3. 
+4. In frontend directory -> .env.local 파일 -> 
+4. In flontend directory -> yarn install
