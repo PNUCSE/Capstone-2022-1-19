@@ -16,7 +16,11 @@
 ## 3. 구성도
 <img width="900" alt="그림1" src="https://user-images.githubusercontent.com/65642745/195553816-083954dc-9469-4881-a65b-a867bc17d46a.png">
 
-## 4. 소개 및 시연 영상
+## 4. 소개 및 시연 영상 
+ 시연 영상 주소
+  https://www.youtube.com/watch?v=tqY4hYAoPsE
+   
+   
 ## 5. 사용법
 ---- cloudmanager part ----
 1. In cloudmanager(main) directory -> pip install -r requirements.txt
